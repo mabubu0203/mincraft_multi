@@ -13,8 +13,8 @@ services:
       EULA: "TRUE"
       TYPE: PAPER
       MODE: survival
-      VERSION: "1.17.41"
-      MEMORY: 2G
+      VERSION: "1.17.1"
+      MEMORY: 4G
     volumes:
       - ./data:/data
       - /etc/timezone:/etc/timezone:ro
@@ -22,7 +22,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2.5G
+          memory: 5G
 
   # Backup
   backup:
