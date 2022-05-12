@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  # Application
+  mc-vanilla:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      MEMORY: 2G
+    volumes:
+      - ./data:/data
+      - /etc/timezone:/etc/timezone:ro
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 2.5G
+
+  # Backup
+  backup:
+    image: itzg/mc-backup
+    depends_on:
+    - mc-vanilla
+    volumes:
+      - ./data:/data:ro
+      - ./mc-backups:/backups
+      - /etc/timezone:/etc/timezone:ro
+    network_mode: "service:mc-vanilla"
