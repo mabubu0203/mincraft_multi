@@ -11,3 +11,19 @@ papper サーバーで起動しています。
 
 # 実施
 WIP
+
+# 構成
+
+```bash
+root
+- docker
+  - data
+    - cache
+    - logs
+    - plugins
+    - world
+    - world_nether
+    - world_the_end
+  - mc-backups
+- README.md
+```
