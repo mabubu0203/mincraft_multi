@@ -12,10 +12,9 @@ services:
     environment:
       SERVER_NAME: u-server-01
       EULA: "TRUE"
-      TYPE: PAPER
       MODE: survival
       VERSION: "1.18.2"
-      MEMORY: 4G
+      MEMORY: 2G
     volumes:
       - ./data:/data
       - /etc/timezone:/etc/timezone:ro
@@ -23,7 +22,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 5G
+          memory: 3G
 
   # Backup
   backup:
