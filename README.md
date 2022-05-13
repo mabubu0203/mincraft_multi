@@ -10,7 +10,8 @@ papper サーバーで起動しています。
 1. このプロジェクトをクローン
 
 # 実施
-WIP
+1. `$ docker-compose -f ./docker/docker-compose.yml up -d`
+1. `$ docker-compose -f ./docker/docker-compose.yml down`
 
 # 構成
 

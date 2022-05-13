@@ -4,6 +4,7 @@ services:
   # Application
   mc-vanilla:
     image: itzg/minecraft-server:latest
+    container_name: "mc-vanilla"
     tty: true
     stdin_open: true
     ports:
@@ -13,7 +14,7 @@ services:
       EULA: "TRUE"
       TYPE: PAPER
       MODE: survival
-      VERSION: "1.17.1"
+      VERSION: "1.18.1"
       MEMORY: 4G
     volumes:
       - ./data:/data
