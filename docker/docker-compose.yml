@@ -13,6 +13,7 @@ services:
       SERVER_NAME: u-server-01
       EULA: "TRUE"
       MODE: survival
+      TYPE: SPIGOT
       VERSION: "1.18.2"
       MEMORY: 2G
     volumes:
