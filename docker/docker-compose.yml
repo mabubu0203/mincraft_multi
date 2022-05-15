@@ -10,9 +10,12 @@ services:
     ports:
       - 25565:25565
     environment:
-      SERVER_NAME: u-server-01
+      SERVER_NAME: "u-server-01"
+      GAMEMODE: "survival"
+      DIFFICULTY: "easy"
+      LEVEL_TYPE: "default"
+      LEVEL_NAME: "world"
       EULA: "TRUE"
-      MODE: survival
       TYPE: SPIGOT
       VERSION: "1.18.2"
       MEMORY: 2G
