@@ -11,8 +11,8 @@ papper サーバーで起動しています。
 
 # 実施
 1. `$ docker-compose -f ./docker/docker-compose.yml up -d`
-1. `wget https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar -O ./opt/minecraft/survival/plugins/Geyser-Spigot.jar`
-1. `wget https://ci.opencollab.dev//job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/target/floodgate-spigot.jar -O ./opt/minecraft/survival/plugins/floodgate-spigot.jar`
+1. `wget https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar -O ./docker/data/plugins/Geyser-Spigot.jar`
+1. `wget https://ci.opencollab.dev//job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/spigot/target/floodgate-spigot.jar -O ./docker/data/plugins/floodgate-spigot.jar`
 1. `$ docker-compose -f ./docker/docker-compose.yml down`
 
 # 構成
