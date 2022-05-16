@@ -1,7 +1,6 @@
 version: "3.8"
 
 services:
-  # Application
   mc-vanilla:
     image: itzg/minecraft-server:latest
     container_name: "mc-vanilla"
@@ -13,6 +12,7 @@ services:
       SERVER_NAME: "u-server-01"
       GAMEMODE: "survival"
       DIFFICULTY: "easy"
+      MAX_PLAYERS: 15
       LEVEL_TYPE: "default"
       LEVEL_NAME: "world"
       EULA: "TRUE"
@@ -22,7 +22,7 @@ services:
     volumes:
       - ./data:/data
       - /etc/timezone:/etc/timezone:ro
-    restart: always
+    restart: unless-stopped
     deploy:
       resources:
         limits:
