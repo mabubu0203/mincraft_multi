@@ -12,7 +12,6 @@ services:
     environment:
       SERVER_NAME: "u-server-01"
       GAMEMODE: "survival"
-      REMOVE_OLD_MODS: "TRUE"
       DIFFICULTY: "easy"
       MAX_PLAYERS: 15
       LEVEL_TYPE: "default"
@@ -23,7 +22,7 @@ services:
       MEMORY: 2G
       TZ: "Asia/Tokyo"
     volumes:
-      - ./data:/data
+      - "./data:/data"
     restart: unless-stopped
     deploy:
       resources:
