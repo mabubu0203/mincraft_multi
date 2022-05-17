@@ -1,41 +1,78 @@
 version: "3.8"
 
 services:
-  mc-vanilla:
-    image: itzg/minecraft-server:latest
-    container_name: "mc-vanilla"
+  mc-spigot:
+    image: "itzg/minecraft-server:2022.7.0"
+    container_name: "mc-spigot"
     tty: true
     stdin_open: true
     ports:
-      - 25565:25565
-      - 19132:19132/udp
+      - "19132:19132/udp"
+      - "19133:19133/udp"
+      - "25565:25565/tcp"
+      - "25575:25575/tcp"
     environment:
-      SERVER_NAME: "u-server-01"
-      GAMEMODE: "survival"
+      # server.properties
+      ALLOW_FLIGHT: "false"
+      ALLOW_NETHER: "true"
+      BROADCAST_CONSOLE_TO_OPS: "true"
+      BROADCAST_RCON_TO_OPS: "true"
+      DEBUG: "false"
       DIFFICULTY: "easy"
-      MAX_PLAYERS: 15
-      LEVEL_TYPE: "default"
+      ENABLE_COMMAND_BLOCK: "true"
+      ENABLE_JMX: "false"
+      ENABLE_RCON: "true"
+      ENABLE_STATUS: "true"
+      ENFORCE_WHITELIST: "true"
+      FORCE_GAMEMODE: "true"
+      GENERATE_STRUCTURES: "true"
+      HARDCORE: "false"
       LEVEL_NAME: "world"
+      LEVEL_TYPE: "DEFAULT"
+      MAX_PLAYERS: 15
+      MODE: "survival"
+      ONLINE_MODE: "true"
+      PVP: "false"
+      RCON_PASSWORD: "${RCON_PASSWORD}"
+      RCON_PORT: 25575
+      SERVER_NAME: "mabubu0203 server"
+      SERVER_PORT: 25565
+      SNOOPER_ENABLED: "false"
+      SPAWN_ANIMALS: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      USE_NATIVE_TRANSPORT: "true"
+      VIEW_DISTANCE: 10
+      WHITELIST: "${WHITELIST}"
+      # other
+      ENABLE_WHITELIST: "TRUE"
       EULA: "TRUE"
+      MAX_MEMORY: "3G"
+      MEMORY: "2G"
+      MODS_FILE: "/extras/mods.txt"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      REMOVE_OLD_MODS: "TRUE"
+      REMOVE_OLD_MODS_DEPTH: 1
+      REMOVE_OLD_MODS_INCLUDE: "*.jar"
       TYPE: "SPIGOT"
-      VERSION: "1.18.2"
-      MEMORY: 2G
       TZ: "Asia/Tokyo"
+      VERSION: "1.18.2"
     volumes:
       - "./data:/data"
+      - "./mods.txt:/extras/mods.txt:ro"
     restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          memory: 3G
 
   # Backup
   backup:
-    image: itzg/mc-backup
+    image: "itzg/mc-backup:latest"
+    environment:
+      RCON_PASSWORD: "${RCON_PASSWORD}"
+      RCON_PORT: 25575
+      SERVER_PORT: 25565
+      TZ: "Asia/Tokyo"
     depends_on:
-    - mc-vanilla
+    - mc-spigot
     volumes:
-      - ./data:/data:ro
-      - ./mc-backups:/backups
-      - /etc/timezone:/etc/timezone:ro
-    network_mode: "service:mc-vanilla"
+      - "./data:/data:ro"
+      - "./mc-backups:/backups"
+    network_mode: "service:mc-spigot"
