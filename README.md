@@ -16,7 +16,7 @@
   `$ cp ./docker/.env.sample ./docker/.env`  
   `$ vi ./docker/.env`  
     設定修正  
-  `$ docker-compose -f ./docker/docker-compose.yml up --build`  
+  `$ docker-compose -f ./docker/docker-compose.yml up --build --remove-orphans`  
   docker-composeのログより起動を確認  
   `$ docker-compose -f ./docker/docker-compose.yml stop`  
 1. 設定修正  
@@ -51,8 +51,8 @@ root
 
 | name | version | 用途 |
 | - | - | - |
-| Geyser-Spigot.jar | 2.0.4(2022/06/07) |  |
-| floodgate-spigot.jar | 2.1.0(2022/03/22) |  |
+| Geyser-Spigot.jar | 2.0.4(2022/06/10) |  |
+| floodgate-spigot.jar | 2.2.0(2022/06/11) |  |
 
 # サーバー接続に必要な情報
 
