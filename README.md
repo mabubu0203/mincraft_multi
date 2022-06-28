@@ -51,8 +51,8 @@ root
 
 | name | version | 用途 |
 | - | - | - |
-| Geyser-Spigot.jar | 2.0.4(2022/06/10) |  |
-| floodgate-spigot.jar | 2.2.0(2022/06/11) |  |
+| Geyser-Spigot.jar | 2.0.4(2022/06/27) |  |
+| floodgate-spigot.jar | 2.2.0(2022/06/17) |  |
 
 # サーバー接続に必要な情報
 
@@ -76,4 +76,8 @@ root
 
 ## 変数変更
 
-`$ vi ./docker/.env`
+```
+$ vi ./docker/.env
+$ vi ./docker/data/ops.json
+$ vi ./docker/data/whitelist.json
+```
