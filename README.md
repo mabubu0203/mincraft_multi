@@ -12,7 +12,7 @@
 1. Mac Mini に Docker for Mac をインストール
 1. Terminalを起動
 1. 初回起動  
-  `$ git clone https://github.com/mabubu0203/mincraft_multi.git`  
+  `$ git clone https://github.com/mabubu0203/minecraft_multi.git`  
   `$ cp ./docker/.env.sample ./docker/.env`  
   `$ vi ./docker/.env`  
     設定修正  
