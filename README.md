@@ -1,4 +1,4 @@
-# mincraft_multi
+# minecraft_multi
 自宅の Mac Mini(Intel CPU) に minecraft サーバーを建て、管理しています。
 
 # 特徴
