@@ -1,5 +1,5 @@
 # mincraft_multi
-自宅の Mac Mini(Intel CPU) に mincraft サーバーを建て、管理しています。
+自宅の Mac Mini(Intel CPU) に minecraft サーバーを建て、管理しています。
 
 # 特徴
 `SPIGOT` サーバーで起動しています。
@@ -51,7 +51,7 @@ root
 
 | name | version | 用途 |
 | - | - | - |
-| Geyser-Spigot.jar | 2.0.4(2022/06/27) |  |
+| Geyser-Spigot.jar | 2.0.4(2022/07/03) |  |
 | floodgate-spigot.jar | 2.2.0(2022/06/17) |  |
 
 # サーバー接続に必要な情報
@@ -60,7 +60,7 @@ root
 
 # 更新について
 
-## mincraft本体(Spigot)
+## minecraft本体(Spigot)
 
 1. docker-compose.ymlを書き換えてブランチにpush
 1. コンテナを停止
@@ -78,6 +78,16 @@ root
 
 ```
 $ vi ./docker/.env
-$ vi ./docker/data/ops.json
-$ vi ./docker/data/whitelist.json
 ```
+
+## ops追加
+
+```
+$ vi ./docker/data/ops.json
+```
+
+# 運用について
+
+## ホワイトリスト追加
+
+WIP
