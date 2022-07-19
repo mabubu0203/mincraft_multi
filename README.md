@@ -1,6 +1,8 @@
 # minecraft_multi
 自宅の Mac Mini(Intel CPU) に minecraft サーバーを建て、管理しています。
 
+- [Minecraftサーバーをクロスプレイで運用するまでにやったこと](https://qiita.com/mabubu0203/items/59a78b689740b42549c0)
+
 # 特徴
 `SPIGOT` サーバーで起動しています。
 
@@ -51,7 +53,7 @@ root
 
 | name | version | 用途 |
 | - | - | - |
-| Geyser-Spigot.jar | 2.0.4(2022/07/03) |  |
+| Geyser-Spigot.jar | 2.0.5(2022/07/18) |  |
 | floodgate-spigot.jar | 2.2.0(2022/06/17) |  |
 
 # サーバー接続に必要な情報
@@ -88,6 +90,10 @@ $ vi ./docker/data/ops.json
 
 # 運用について
 
-## ホワイトリスト追加
+## ops.json
 
 WIP
+
+## whitelist.json
+
+`$ /whitelist add {username}`
