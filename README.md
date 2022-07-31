@@ -53,7 +53,7 @@ root
 
 | name | version | 用途 |
 | - | - | - |
-| Geyser-Spigot.jar | 2.0.5(2022/07/25) |  |
+| Geyser-Spigot.jar | 2.0.6(2022/07/28) |  |
 | floodgate-spigot.jar | 2.2.0(2022/06/17) |  |
 
 # サーバー接続に必要な情報

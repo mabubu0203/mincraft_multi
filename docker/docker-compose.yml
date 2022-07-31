@@ -63,7 +63,7 @@ services:
       REMOVE_OLD_MODS_INCLUDE: "*.jar"
       TYPE: "SPIGOT"
       TZ: "Asia/Tokyo"
-      VERSION: "1.19"
+      VERSION: "1.19.1"
     volumes:
       - "./data:/data"
       - "./mods.txt:/extras/mods.txt:ro"
