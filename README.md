@@ -51,10 +51,10 @@ root
 
 # プラグイン
 
-| name | version | 用途 |
-| - | - | - |
-| Geyser-Spigot.jar | 2.0.7(2022/08/20) |  |
-| floodgate-spigot.jar | 2.2.0(2022/08/10) |  |
+| name                 | version           | 用途 |
+|----------------------|-------------------|------|
+| Geyser-Spigot.jar    | 2.1.0(2022/10/12) |      |
+| floodgate-spigot.jar | 2.2.0(2022/08/10) |      |
 
 # サーバー接続に必要な情報
 
